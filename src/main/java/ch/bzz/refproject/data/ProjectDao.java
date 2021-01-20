@@ -87,7 +87,7 @@ public class ProjectDao implements Dao<Project, String>{
             project.setProjectUUID(UUID.randomUUID().toString());
             sqlQuery = "INSERT INTO Project";
         } else {
-            sqlQuery = "REPLACE Project";
+            sqlQuery = "UPDATE Project";
         }
         sqlQuery +=
                 " SET projectUUID=?," +
